@@ -12,7 +12,6 @@ $conexion = mysqli_connect(
     '5a5fa9782f4bbb0e6ba3acdd5ee4e595dce5158627e42961c0ea080892cb7dbc',
     $sqlp
 );
-mysql_set_charset('utf8', $conexion);
 //if (isset($conexion)) {
 //    echo 'Conexiòn establecida <br>';
 //}
