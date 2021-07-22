@@ -7,7 +7,7 @@ $sqlp = "CREATE TABLE Tarea(
 )";
 session_start();
 $conexion = mysqli_connect(
-    'postgres://etsoarkokaxwiz:5a5fa9782f4bbb0e6ba3acdd5ee4e595dce5158627e42961c0ea080892cb7dbc@ec2-3-233-100-43.compute-1.amazonaws.com:5432/dd4lvfi0knmca1',
+    'jdbc:postgresql://ec2-3-233-100-43.compute-1.amazonaws.com/postgresql-angular-05318',
     'etsoarkokaxwiz',
     '5a5fa9782f4bbb0e6ba3acdd5ee4e595dce5158627e42961c0ea080892cb7dbc',
     $sqlp
