@@ -7,7 +7,7 @@
         echo $descripcion. '<br>';
         $insercion = "INSERT INTO Tarea (titulo, descripcion) VALUES ('$titulo', '$descripcion')";
         $resultado = pg_query($conexion, $insercion);
-        if ($resultado) {
+        if (!$resultado) {
             //echo 'Exito <br>';
             $_SESSION['message'] = 'Tarea Guardada';
             $_SESSION['message_type'] = 'success';
