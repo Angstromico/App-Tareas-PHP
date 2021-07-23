@@ -44,7 +44,7 @@ include('includes/header.php');
                     <?php 
                         $consulta = "SELECT * FROM Tareas";
                         $resultado = mysqli_query($conexion, $consulta);
-                        while ($fila = mysqli_fetch_assoc($resultado)) { ?>
+                        while ($fila = pg_fetch_assoc($resultado)) { ?>
                             <tr>
                                 <td><?php echo $fila['titulo']; ?></td>
                                 <td><?php echo $fila['descripcion']; ?></td>
