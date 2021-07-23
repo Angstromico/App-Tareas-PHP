@@ -5,8 +5,8 @@
         $descripcion = $_POST['descripcion'];
         echo $titulo. '<br>';
         echo $descripcion. '<br>';
-        $insercion = "INSERT INTO Tareas (titulo, descripcion) VALUES ('$titulo', '$descripcion')";
-        $resultado = mysqli_query($conexion, $insercion);
+        $insercion = "INSERT INTO Tarea (titulo, descripcion) VALUES ('$titulo', '$descripcion')";
+        $resultado = pg_query($conexion, $insercion);
         if ($conexion -> query($insercion) === true) {
             //echo 'Exito <br>';
             $_SESSION['message'] = 'Tarea Guardada';

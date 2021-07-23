@@ -3,8 +3,8 @@
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
         //echo 'Deleting ID '. $id;
-        $eliminando = "DELETE FROM Tareas WHERE id = $id";
-        $eliminado = mysqli_query($conexion, $eliminando);
+        $eliminando = "DELETE FROM Tarea WHERE id = $id";
+        $eliminado = pg_query($conexion, $eliminando);
         if(!$eliminado) {
             die('Fallo');
         };

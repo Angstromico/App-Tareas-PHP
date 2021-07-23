@@ -42,7 +42,7 @@ include('includes/header.php');
                 </thead>
                 <tbody>
                     <?php 
-                        $consulta = "SELECT * FROM Tareas";
+                        $consulta = "SELECT * FROM Tarea";
                         $resultado = pg_query($conexion, $consulta);
                         while ($fila = pg_fetch_assoc($resultado)) { ?>
                             <tr>

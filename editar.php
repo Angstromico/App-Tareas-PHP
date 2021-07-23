@@ -2,10 +2,10 @@
     include('conexion.php');
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
-        $seleccionando = "SELECT * FROM Tareas WHERE id = $id";
-        $seleccionado = mysqli_query($conexion, $seleccionando);
-        if(mysqli_num_rows($seleccionado) == 1) {
-            $fila = mysqli_fetch_assoc($seleccionado);
+        $seleccionando = "SELECT * FROM Tarea WHERE id = $id";
+        $seleccionado = pg_query($conexion, $seleccionando);
+        if(pg_num_rows($seleccionado) == 1) {
+            $fila = pg_fetch_assoc($seleccionado);
             $titulo = $fila['titulo'];
             $descripcion = $fila['descripcion'];
         }
@@ -18,8 +18,8 @@
         //echo $id. '<br>';
         //echo $titulo. '<br>';
         //echo $descripcion. '<br>';
-        $actualizacion = "UPDATE Tareas SET titulo = '$titulo', descripcion = '$descripcion' WHERE id = '$id'";
-        mysqli_query($conexion, $actualizacion);
+        $actualizacion = "UPDATE Tarea SET titulo = '$titulo', descripcion = '$descripcion' WHERE id = '$id'";
+        pg_query($conexion, $actualizacion);
         $_SESSION['message'] = 'Tarea Modificada Efectivamente';
         $_SESSION['message_type'] = 'warning';
         header('Location: index.php');
