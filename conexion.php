@@ -7,7 +7,7 @@ $database = "dd4lvfi0knmca1";
 $port = "5432";
 
 $conexion = pg_connect("host=".$host." port=".$port
-          ." dbname=".$database." user=".$username." password=".$password)
+          ." dbname=".$database." user=".$username." password=".$password);
 or die('No se puedo conectar: ' . pg_last_error());
 //if (isset($conexion)) {
 //    echo 'Conexiòn establecida <br>';
