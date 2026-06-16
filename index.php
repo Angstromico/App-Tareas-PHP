@@ -55,7 +55,6 @@ include('includes/header.php');
                                 </td>
                             </tr>
                         <?php } ?>
-                    ?>
                 </tbody>
             </table>
         </div>
