@@ -1,7 +1,7 @@
 <?php
     include('conexion.php');
     if(isset($_GET['id'])) {
-        $id = $_GET['id'];
+        $id = pg_escape_string($conexion, $_GET['id']);
         $seleccionando = "SELECT * FROM Tarea WHERE id = $id";
         $seleccionado = pg_query($conexion, $seleccionando);
         if(pg_num_rows($seleccionado) == 1) {
@@ -11,13 +11,9 @@
         }
     } 
     if(isset($_POST['actualizacion'])) {
-        //echo 'actualizando';
-        $id = $_GET['id'];
-        $titulo = $_POST['titulo'];
-        $descripcion = $_POST['descripcion'];
-        //echo $id. '<br>';
-        //echo $titulo. '<br>';
-        //echo $descripcion. '<br>';
+        $id = pg_escape_string($conexion, $_GET['id']);
+        $titulo = pg_escape_string($conexion, $_POST['titulo']);
+        $descripcion = pg_escape_string($conexion, $_POST['descripcion']);
         $actualizacion = "UPDATE Tarea SET titulo = '$titulo', descripcion = '$descripcion' WHERE id = '$id'";
         pg_query($conexion, $actualizacion);
         $_SESSION['message'] = 'Tarea Modificada Efectivamente';

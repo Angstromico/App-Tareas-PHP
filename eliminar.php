@@ -1,8 +1,7 @@
 <?php 
     include('conexion.php');
     if(isset($_GET['id'])) {
-        $id = $_GET['id'];
-        //echo 'Deleting ID '. $id;
+        $id = pg_escape_string($conexion, $_GET['id']);
         $eliminando = "DELETE FROM Tarea WHERE id = $id";
         $eliminado = pg_query($conexion, $eliminando);
         if(!$eliminado) {
