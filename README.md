@@ -37,7 +37,19 @@ Para ejecutar este proyecto de manera local o en un servidor de produccion, se r
 
 ## Configuracion e Instalacion
 
-### 1. Clonar el Repositorio
+### Ejecucion con Docker (Recomendado)
+
+Si tiene Docker y Docker Compose instalados, puede iniciar el proyecto rapidamente ejecutando:
+
+```bash
+docker-compose up -d --build
+```
+
+La aplicacion estara disponible en `http://localhost:8055`.
+
+### Instalacion Manual
+
+#### 1. Clonar el Repositorio
 
 Descargue los archivos del proyecto en su directorio de servidor web local.
 
