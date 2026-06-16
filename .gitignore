@@ -1,0 +1,15 @@
+# Docker
+.docker/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# PHP
+composer.phar
+vendor/
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# Base de datos (datos locales si se usaran carpetas)
+# pgdata/
