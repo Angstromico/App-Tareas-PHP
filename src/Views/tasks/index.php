@@ -44,7 +44,7 @@
                             <td><?php echo $task['fecha']; ?></td>
                             <td>
                                 <a class="btn btn-secondary" href="index.php?action=edit&id=<?php echo $task['id']; ?>"><i class="fas fa-marker"></i></a>
-                                <a class="btn btn-danger" href="index.php?action=destroy&id=<?php echo $task['id']; ?>"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar esta tarea?')" href="index.php?action=destroy&id=<?php echo $task['id']; ?>"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
