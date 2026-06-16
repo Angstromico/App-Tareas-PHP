@@ -1,5 +1,9 @@
 # Sistema de Gestion de Tareas PHP (Arquitectura MVC)
 
+<p align="center">
+  <img src="./main.png" alt="Imagen de la aplicacion" width="600">
+</p>
+
 Este proyecto es una aplicacion web para la administracion de tareas, refactorizada siguiendo el patron de arquitectura **Modelo-Vista-Controlador (MVC)** para garantizar un codigo limpio, seguro y facil de mantener.
 
 ## Descripcion General
@@ -8,11 +12,11 @@ La aplicacion separa la logica de negocio (Modelos), la interfaz de usuario (Vis
 
 ## Tecnologias Utilizadas
 
-*   **Arquitectura:** MVC (Modelo-Vista-Controlador)
-*   **Lenguaje:** PHP 8.1
-*   **Base de Datos:** PostgreSQL 15
-*   **Contenerizacion:** Docker & Docker Compose
-*   **Frontend:** Bootstrap 5 & FontAwesome
+- **Arquitectura:** MVC (Modelo-Vista-Controlador)
+- **Lenguaje:** PHP 8.1
+- **Base de Datos:** PostgreSQL 15
+- **Contenerizacion:** Docker & Docker Compose
+- **Frontend:** Bootstrap 5 & FontAwesome
 
 ## Estructura del Proyecto
 
@@ -60,6 +64,7 @@ La aplicacion estara disponible en `http://localhost:8055`.
 ## Desarrollo y Mantenimiento
 
 Gracias a la estructura MVC, para añadir nuevas funcionalidades:
+
 - Añada metodos de consulta en `src/Models/Task.php`.
 - Defina la logica de respuesta en `src/Controllers/TaskController.php`.
 - Cree o modifique las plantillas en `src/Views/`.
